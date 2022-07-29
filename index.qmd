@@ -13,7 +13,7 @@ format:
 
 Joel Nitta
 
-## How to translate?g
+## How to translate?
 
 - **Not as simple** as just re-writing text in another language as if translating a novel
 
@@ -80,7 +80,7 @@ Two aspects:
 - The Workbench format is based on **Rmarkdown** and **pandoc**
   - Rendering of lessons is greatly simplified
 
-- I am developing an R package to facilitate translating with the Workbench format called `dovetail`
+- I am developing an R package to facilitate translating with the Workbench format called [dovetail](https://github.com/joelnitta/dovetail)
 :::
 
 ::: {.column width="20%"}
@@ -90,7 +90,7 @@ Two aspects:
 
 ::::
 
-## `dovetail`
+## [dovetail](https://github.com/joelnitta/dovetail)
 
 - Each translation is **contained within each lesson**^[For now; may change in the future]
 
@@ -98,7 +98,7 @@ Two aspects:
 
 - Plan to have a standard system for translation (e.g., pushing/pulling from transifex)
 
-## `dovetail` design philosophy
+## [dovetail](https://github.com/joelnitta/dovetail) design philosophy
 
 - Make it easier for maintainer to maintain (**`i18n`**)
   - **Not dependent on one person** maintaining one central repo
