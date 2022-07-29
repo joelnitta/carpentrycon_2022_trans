@@ -53,11 +53,11 @@ Two aspects:
 
 ## PO4gitbook
 
-- All translations controlled from a central repo with submodules for each lesson
+- All translations controlled from a central repo with submodules for each lesson (can traca  changes)
 
 - Rendering not possible by typical translator; required David PS to update each time
 
-- No standardard system for how to localize
+- No standard system for how to localize
   - transifex (cloud-based)
   - POedit (local text editor)
   - github (online code review; used by JA community)
