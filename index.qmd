@@ -1,0 +1,111 @@
+---
+format:
+  revealjs:
+    slide-level: 2
+    css: styles.css
+    slide-number: true
+    self-contained: true
+---
+
+## Translation at the Carpentries:
+
+### Technology past and present
+
+Joel Nitta
+
+## How to translate?g
+
+- **Not as simple** as just re-writing text in another language as if translating a novel
+
+- Carpentries lessons are **technical documents** (rendered using software) and therefore present **unique challenges**
+
+## Challenges in technical translation
+
+- Need to be able to **update translation when original changes**
+
+- Need to be able to **deal with source code vs. rendered version**
+
+- Most solutions for translating source code (`gettext` and PO files) are designed with **software** in mind, not prose text
+
+## What is technical translation anyways?
+
+Two aspects:
+
+- internationalization (**i18n**): Providing the **framework** to support translation (requires **technical knowledge**)
+
+- localization (**l10n**): Actually translating strings (requires **linguistic knowlege**)
+
+## Past approach ("Styles" format)
+
+- The current Carpentries lesson format is called the **"Styles" format**
+
+## Past approach ("Styles" format)
+
+![](https://carpentries.org/images/blog/2022/01/2022-01-31-python-choice-old.png){fig-alt="Programming With Python built with the Styles template on 2022-01-27"}
+
+## Past approach ("Styles" format)
+
+- The current Carpentries lesson format is called the **"Styles" format**
+
+- The Styles format is based on **Jekyll** (and some other tools)
+
+- Translation system designed by David Pérez-Suárez used a tool called [PO4gitbook](https://github.com/darkcircle/po4gitbook)
+
+## PO4gitbook
+
+- All translations controlled from a central repo with submodules for each lesson
+
+- Rendering not possible by typical translator; required David PS to update each time
+
+- No standardard system for how to localize
+  - transifex (cloud-based)
+  - POedit (local text editor)
+  - github (online code review; used by JA community)
+
+## New approach ("Workbench" format)
+
+- The upcoming Carpentries lesson format is the **"Workbench" format**
+
+## New approach ("Workbench" format)
+
+![](https://carpentries.org/images/blog/2022/01/2022-01-31-python-choice.png){fig-alt="Programming With Python built with the Carpentries Workbench on 2022-01-27"}
+
+## New approach ("Workbench" format)
+
+:::: {.columns}
+
+::: {.column width="80%"}
+- The upcoming Carpentries lesson format is the **"Workbench" format**
+
+- The Workbench format is based on **Rmarkdown** and **pandoc**
+  - Rendering of lessons is greatly simplified
+
+- I am developing an R package to facilitate translating with the Workbench format called `dovetail`
+:::
+
+::: {.column width="20%"}
+[![](https://carpentries.github.io/sandpaper/logo.png){fig-alt="sandpaper R package logo"}](https://carpentries.github.io/sandpaper/)
+
+:::
+
+::::
+
+## `dovetail`
+
+- Each translation is **contained within each lesson**^[For now; may change in the future]
+
+- Rendering is **easily accomplished locally** by the translator
+
+- Plan to have a standard system for translation (e.g., pushing/pulling from transifex)
+
+## `dovetail` design philosophy
+
+- Make it easier for maintainer to maintain (**`i18n`**)
+  - **Not dependent on one person** maintaining one central repo
+
+- Make it easier for translators to translate (**`l10n`**)
+  - Requires **minimal technical knowlege** to participate (don't need git)
+
+::: {.fragment}	
+**Promote participation in Carpentries by translating!**
+:::
