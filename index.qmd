@@ -9,9 +9,11 @@ format:
 
 ## Translation at the Carpentries:
 
-### Technology past and present
+### Technology past, present, and future
 
 Joel Nitta
+
+[https://joelnitta.github.io/carpentrycon_2022_trans](https://joelnitta.github.io/carpentrycon_2022_trans)
 
 ## How to translate?
 
