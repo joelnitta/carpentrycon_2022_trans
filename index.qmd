@@ -5,45 +5,88 @@ format:
     css: styles.css
     slide-number: true
     self-contained: true
+    from: markdown+emoji
 ---
 
 ## Translation at the Carpentries:
 
+:::: {.columns}
+
+::: {.column width="80%"}
 ### Technology past, present, and future
+
+<br>
+<br>
 
 Joel Nitta
 
-[https://joelnitta.github.io/carpentrycon_2022_trans](https://joelnitta.github.io/carpentrycon_2022_trans)
+[https://joelnitta.github.io/carpentrycon_2022_trans](https://joelnitta.github.io/carpentrycon_2022_trans){.medium}
+:::
+
+::: {.column width="20%"}
+![](images/carpentries-hex-blue.svg){.absolute fig-alt="Carpentries logo" height="350" top=75 right=0}
+:::
+
+::::
 
 ## How to translate?
 
+:::: {.columns}
+
+::: {.column width="80%"}
 - **Not as simple** as just re-writing text in another language as if translating a novel
 
 - Carpentries lessons are **technical documents** (rendered using software) and therefore present **unique challenges**
 
+:::
+
+::: {.column width="20%"}
+![](https://publicdomainvectors.org/photos/Translation-icon.png){fig-alt="Symbol of letter A translated to Japanese hiragana " height="150"}
+:::
+
+::::
+
 ## Challenges in technical translation
 
-- Need to be able to **update translation when original changes**
-
-- Need to be able to **deal with source code vs. rendered version**
+- Need to be able to
+  - **update translation when original changes**
+  - **deal with source code vs. rendered version**
 
 - Most solutions for translating source code (`gettext` and PO files) are designed with **software** in mind, not prose text
 
+## PO files
+
+::: {.center}
+![](images/translation_workflow.svg){fig-alt="Translation workflow using PO files" height="550"}
+:::
+
 ## What is technical translation anyways?
 
+:::: {.columns}
+
+::: {.column width="80%"}
 Two aspects:
 
 - internationalization (**i18n**): Providing the **framework** to support translation (requires **technical knowledge**)
 
 - localization (**l10n**): Actually translating strings (requires **linguistic knowlege**)
+:::
+
+::: {.column width="20%"}
+![](https://2.bp.blogspot.com/-3BjcJgshUfo/V-xj68Q5enI/AAAAAAAA-Ik/7APxh7q8dgMwjIkt_BJB4N3VeElIgfH7wCLcB/s300/earth_africa_europe.png){fig-alt="Globes with different continents at center" width="200"}
+:::
+
+::::
 
 ## Past approach ("Styles" format)
 
 - The current Carpentries lesson format is called the **"Styles" format**
 
-## Past approach ("Styles" format)
+---
 
-![](https://carpentries.org/images/blog/2022/01/2022-01-31-python-choice-old.png){fig-alt="Programming With Python built with the Styles template on 2022-01-27"}
+::: {.center}
+![](https://carpentries.org/images/blog/2022/01/2022-01-31-python-choice-old.png){fig-alt="Programming With Python built with the Styles template on 2022-01-27" height="600"}
+:::
 
 ## Past approach ("Styles" format)
 
@@ -51,26 +94,42 @@ Two aspects:
 
 - The Styles format is based on **Jekyll** (and some other tools)
 
-- Translation system designed by David Pérez-Suárez used a tool called [PO4gitbook](https://github.com/darkcircle/po4gitbook)
+- Translation system* designed by David Pérez-Suárez used a tool called [PO4gitbook](https://github.com/darkcircle/po4gitbook)
+
+::: aside
+*Handbook: [https://carpentries-i18n-handbook.readthedocs.io/](https://carpentries-i18n-handbook.readthedocs.io/)
+:::
 
 ## PO4gitbook
 
-- All translations controlled from a central repo with submodules for each lesson (can traca  changes)
+- All translations **controlled from a central repo** with submodules for each lesson (can track changes)
 
-- Rendering not possible by typical translator; required David PS to update each time
+- Rendering not possible by typical translator; **required David PS to update each time**
 
 - No standard system for how to localize
   - transifex (cloud-based)
   - POedit (local text editor)
   - github (online code review; used by JA community)
 
+---
+
+::: {.center}
+![](images/i18n_repo.png){fig-alt="Screenshot of https://github.com/carpentries-i18n/i18n" height="600"}
+:::
+
+::: aside
+[https://github.com/carpentries-i18n/i18n](https://github.com/carpentries-i18n/i18n)
+:::
+
 ## New approach ("Workbench" format)
 
 - The upcoming Carpentries lesson format is the **"Workbench" format**
 
-## New approach ("Workbench" format)
+---
 
-![](https://carpentries.org/images/blog/2022/01/2022-01-31-python-choice.png){fig-alt="Programming With Python built with the Carpentries Workbench on 2022-01-27"}
+::: {.center}
+![](https://carpentries.org/images/blog/2022/01/2022-01-31-python-choice.png){fig-alt="Programming With Python built with the Carpentries Workbench on 2022-01-27" height="700"}
+:::
 
 ## New approach ("Workbench" format)
 
@@ -80,9 +139,12 @@ Two aspects:
 - The upcoming Carpentries lesson format is the **"Workbench" format**
 
 - The Workbench format is based on **Rmarkdown** and **pandoc**
-  - Rendering of lessons is greatly simplified
+  - Rendering of lessons is **greatly simplified**
 
+:::{.fragment}
 - I am developing an R package to facilitate translating with the Workbench format called [dovetail](https://github.com/joelnitta/dovetail)
+:::
+
 :::
 
 ::: {.column width="20%"}
@@ -100,6 +162,50 @@ Two aspects:
 
 - Plan to have a standard system for translation (e.g., pushing/pulling from transifex)
 
+## [dovetail](https://github.com/joelnitta/dovetail)
+
+```r
+library(dovetail)
+
+# Copy (untranslated) files needed for rendering lesson
+create_locale("ja")
+
+# Create PO files ----
+create_po_for_locale("ja")
+
+# Edit PO files ----
+# for example, with
+# usethis::edit_file("po/ja/01-introduction.po")
+
+# Translate md files ----
+# translate all (R)md files at once to `./locale/{lang}/`
+translate_md_for_locale("ja")
+
+# Build translated lesson ----
+sandpaper::build_lesson("locale/ja/")
+```
+
+## [dovetail](https://github.com/joelnitta/dovetail){.scrollable}
+
+Output of translation
+
+```
+|-- CONTRIBUTING.md             # - Carpentries Rules for Contributions
+|-- README.md                   # - Describes lesson
+...
+|-- po                          # - NEW, contains PO files for translation
+|   `-- ja/                     
+|       |-- 00-introducition.po 
+|       |-- CONTRIBUTING.po     
+|       |...                    
+|-- locale                      # - NEW, contains translated files
+|   `-- ja/                     
+|       |-- CONTRIBUTING.md     # - NEW, translated markdown files
+|       |-- site/               # - NEW, translated, rendered site
+|           |-- built/          
+|           |...               
+```
+
 ## [dovetail](https://github.com/joelnitta/dovetail) design philosophy
 
 - Make it easier for maintainer to maintain (**`i18n`**)
@@ -109,5 +215,5 @@ Two aspects:
   - Requires **minimal technical knowlege** to participate (don't need git)
 
 ::: {.fragment}	
-**Promote participation in Carpentries by translating!**
+**Promote participation in Carpentries by translating!** :grinning: :open_hands:
 :::
