@@ -104,9 +104,10 @@ Two aspects:
 
 - All translations **controlled from a central repo** with submodules for each lesson (can track changes)
 
-- Rendering not possible by typical translator; **required David PS to update each time**
+- Rendering not straightforward
+  - (most) Translators can't "preview" lesson
 
-- No standard system for how to localize
+- Various methods used to localize
   - transifex (cloud-based)
   - POedit (local text editor)
   - github (online code review; used by JA community)
@@ -123,7 +124,7 @@ Two aspects:
 
 ## New approach ("Workbench" format)
 
-- The upcoming Carpentries lesson format is the **"Workbench" format**
+- The upcoming Carpentries lesson format is called **"Workbench"**, being developed by Zhian Kamvar
 
 ---
 
@@ -136,7 +137,7 @@ Two aspects:
 :::: {.columns}
 
 ::: {.column width="80%"}
-- The upcoming Carpentries lesson format is the **"Workbench" format**
+- The upcoming Carpentries lesson format is called **"Workbench"**, being developed by Zhian Kamvar
 
 - The Workbench format is based on **Rmarkdown** and **pandoc**
   - Rendering of lessons is **greatly simplified**
