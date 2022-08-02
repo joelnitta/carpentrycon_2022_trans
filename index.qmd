@@ -128,6 +128,44 @@ Two aspects:
 [https://github.com/carpentries-i18n/i18n](https://github.com/carpentries-i18n/i18n)
 :::
 
+## Case study: Carpentries-JA 
+
+- Check translations using GitHub PR review tools
+
+:::{.center}
+![](images/swc-ja-review.png){fig-alt="Screenshot of PR review of translation on GitHub" height="400"}
+:::
+
+::: aside
+[https://swcarpentry-ja.github.io/](https://swcarpentry-ja.github.io/)
+:::
+
+## Case study: Carpentries-JA 
+
+- Completed `R-novice-gapminder`, working on `git-novice`, `shell-novice`
+
+:::{.center}
+![](images/swc-ja-progress.png){fig-alt="Screenshot of progress on GitHub projects in Carpentries-JA repo" height="450"}
+:::
+
+## Case study: Carpentries-JA 
+
+- Held [first workshop in Japanese](https://swcarpentry-ja.github.io/2021-04-02-todai-online-en/)!
+
+:::{.center}
+![](images/swc-ja-workshop.png){fig-alt="Screenshot of SWC workshop website in Japanese" height="450"}
+:::
+
+## Case study: Carpentries-JA 
+
+- Green stickies :green_heart:
+  - GitHub works well for collaboration
+  - Can do translation review in browser
+
+- Red stickies :x:
+  - Requirement for git knowlege is a very **high barrier to participation**
+  - **Leads to burnout** because only a few members can contribute
+
 ## New approach ("Workbench" format)
 
 - The upcoming Carpentries lesson format is called **"Workbench"**, being developed by Zhian Kamvar
