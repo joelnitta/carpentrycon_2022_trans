@@ -73,9 +73,9 @@ The University of Tokyo
 ::: {.column width="80%"}
 Two aspects:
 
-- internationalization (**i18n**): Providing the **framework** to support translation (requires **technical knowledge**)
+- internationalization (`i18n`): Providing the **framework** to support translation (requires **technical knowledge**)
 
-- localization (**l10n**): Actually translating strings (requires **linguistic knowlege**)
+- localization (`l10n`): Actually translating strings (requires **linguistic knowlege**)
 :::
 
 ::: {.column width="20%"}
@@ -100,11 +100,7 @@ Two aspects:
 
 - The Styles format is based on [Jekyll](https://jekyllrb.com/) (and some other tools)
 
-- Translation system* designed by David Pérez-Suárez used a tool called [PO4gitbook](https://github.com/darkcircle/po4gitbook)
-
-::: aside
-*Handbook: [https://carpentries-i18n-handbook.readthedocs.io/](https://carpentries-i18n-handbook.readthedocs.io/)
-:::
+- Translation system^[Handbook: [https://carpentries-i18n-handbook.readthedocs.io/](https://carpentries-i18n-handbook.readthedocs.io/)] designed by David Pérez-Suárez used a tool called [PO4gitbook](https://github.com/darkcircle/po4gitbook)
 
 ## PO4gitbook
 
@@ -168,7 +164,7 @@ Two aspects:
 
 ## New approach ("Workbench" format)
 
-- The upcoming Carpentries lesson format is called **"Workbench"**, being developed by Zhian Kamvar
+- The upcoming Carpentries lesson format is called [**"Workbench"**](https://carpentries.org/blog/2022/01/live-lesson-infrastructure/), developed by Zhian Kamvar
 
 ---
 
@@ -181,7 +177,7 @@ Two aspects:
 :::: {.columns}
 
 ::: {.column width="80%"}
-- The upcoming Carpentries lesson format is called **"Workbench"**, being developed by Zhian Kamvar
+- The upcoming Carpentries lesson format is called [**"Workbench"**](https://carpentries.org/blog/2022/01/live-lesson-infrastructure/), developed by Zhian Kamvar
 
 - The Workbench format is based on **Rmarkdown** and **pandoc**
   - Rendering of lessons is **greatly simplified**
@@ -199,7 +195,7 @@ Two aspects:
 
 ::::
 
-## [dovetail](https://github.com/joelnitta/dovetail)
+## `dovetail`
 
 - Each translation is **contained within each lesson**^[For now; may change in the future]
 
@@ -207,7 +203,11 @@ Two aspects:
 
 - Plan to have a standard system for translation (e.g., pushing/pulling from transifex)
 
-## [dovetail](https://github.com/joelnitta/dovetail)
+::: aside
+[https://github.com/joelnitta/dovetail](https://github.com/joelnitta/dovetail)
+:::
+
+## `dovetail`
 
 ```r
 library(dovetail)
@@ -230,7 +230,7 @@ translate_md_for_locale("ja")
 sandpaper::build_lesson("locale/ja/")
 ```
 
-## [dovetail](https://github.com/joelnitta/dovetail){.scrollable}
+## `dovetail`
 
 Output of translation
 
@@ -251,12 +251,12 @@ Output of translation
 |           |...               
 ```
 
-## [dovetail](https://github.com/joelnitta/dovetail) design philosophy
+## `dovetail` design philosophy
 
-- Make it easier for maintainer to maintain (**`i18n`**)
+- Make it easier for maintainer to maintain (`i18n`)
   - **Not dependent on one person** maintaining one central repo
 
-- Make it easier for translators to translate (**`l10n`**)
+- Make it easier for translators to translate (`l10n`)
   - Requires **minimal technical knowlege** to participate (don't need git)
 
 ## Promote participation in Carpentries by translating!
@@ -264,7 +264,7 @@ Output of translation
 :::: {.columns}
 
 ::: {.column width="80%"}
-- By making translation (l10n) simple, we can **encourage participation** and **grow local communities**
+- By making translation (`l10n`) simple, we can **encourage participation** and **grow local communities**
 :::
 
 ::: {.column width="20%"}
