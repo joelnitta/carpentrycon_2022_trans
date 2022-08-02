@@ -20,7 +20,11 @@ format:
 
 Joel Nitta
 
+::: {.medium}
+The University of Tokyo  
 [https://joelnitta.github.io/carpentrycon_2022_trans](https://joelnitta.github.io/carpentrycon_2022_trans){.medium}
+:::
+
 :::
 
 ::: {.column width="20%"}
@@ -52,7 +56,9 @@ Joel Nitta
   - **update translation when original changes**
   - **deal with source code vs. rendered version**
 
+::: {.fragment}
 - Most solutions for translating source code (`gettext` and PO files) are designed with **software** in mind, not prose text
+:::
 
 ## PO files
 
@@ -92,7 +98,7 @@ Two aspects:
 
 - The current Carpentries lesson format is called the **"Styles" format**
 
-- The Styles format is based on **Jekyll** (and some other tools)
+- The Styles format is based on [Jekyll](https://jekyllrb.com/) (and some other tools)
 
 - Translation system* designed by David Pérez-Suárez used a tool called [PO4gitbook](https://github.com/darkcircle/po4gitbook)
 
@@ -215,6 +221,18 @@ Output of translation
 - Make it easier for translators to translate (**`l10n`**)
   - Requires **minimal technical knowlege** to participate (don't need git)
 
-::: {.fragment}	
-**Promote participation in Carpentries by translating!** :grinning: :open_hands:
+## Promote participation in Carpentries by translating!
+
+:::: {.columns}
+
+::: {.column width="80%"}
+- By making translation (l10n) simple, we can **encourage participation** and **grow local communities**
 :::
+
+::: {.column width="20%"}
+![](https://2.bp.blogspot.com/-aUf0uI4Zsqw/U3v3Io9TvFI/AAAAAAAAgoY/dVk5zRcP0Cs/s100/tree_seichou02.png){fig-alt="Sprouting plant" height="150"}
+:::
+
+::::
+
+
