@@ -179,7 +179,7 @@ Two aspects:
 ::: {.column width="80%"}
 - The upcoming Carpentries lesson format is called [**"Workbench"**](https://carpentries.org/blog/2022/01/live-lesson-infrastructure/), developed by Zhian Kamvar
 
-- The Workbench format is based on **Rmarkdown** and **pandoc**
+- The Workbench format is based on **R** and **pandoc**-flavoured markdown
   - Rendering of lessons is **greatly simplified**
 
 :::{.fragment}
