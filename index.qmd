@@ -102,7 +102,7 @@ Two aspects:
 
 - Translation system^[Handbook: [https://carpentries-i18n-handbook.readthedocs.io/](https://carpentries-i18n-handbook.readthedocs.io/)] designed by David Pérez-Suárez used a tool called [PO4gitbook](https://github.com/darkcircle/po4gitbook)
 
-## PO4gitbook
+## Past approach ("Styles" format)
 
 - All translations **controlled from a central repo** with submodules for each lesson (can track changes)
 
@@ -122,6 +122,21 @@ Two aspects:
 
 ::: aside
 [https://github.com/carpentries-i18n/i18n](https://github.com/carpentries-i18n/i18n)
+:::
+
+## Languages translated so far {.smaller}
+
+- Spanish 
+- Italian
+- Portuguese
+- Japanese
+- German
+- Ukrainian
+- French
+- Korean
+
+::: aside
+In rough order of number of translators; includes partially translated lessons
 :::
 
 ## Case study: Carpentries-JA 
